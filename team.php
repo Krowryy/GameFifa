@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" href="css/game.css" type="text/css" />
 <script type="text/javascript" src="js/formation.js" ></script>
+ <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
 <header id="header" class="header" style="border:1px solid red">
     <div class="container">
       <a href="index.php">Home</a>
@@ -20,10 +21,10 @@
     </div>
 </header>
 <body>
-    <div style="margin-top:10px;">
-        <table class="footballground" id="table" border="1">
+    <div id="test" style="margin-top:10px;">
+        <table class="footballground" id="table" >
             <tr>
-                <td id="top1" name="top1" "><img id="imgTop1" name="imgTop1" src="img/playerFoot.png"></td>
+                <td id="top1" name="top1"><img id="imgTop1" name="imgTop1" src="img/playerFoot.png"></td>
                 <td id="top2" name="top2"><img id="imgTop2" name="imgTop2" src="img/playerFoot.png"></td>
                 <td id="top3" name="top3"><img id="imgTop3" name="imgTop3" src="img/playerFoot.png"></td>
                 <td id="top4" name="top4"><img id="imgTop4" name="imgTop4" src="img/playerFoot.png"></td>
@@ -38,7 +39,7 @@
             </tr>
             <tr>
                 <td id="midtop1" name="midtop1"><img id="imgMidTop1" name="imgMidTop1" src="img/playerFoot.png"></td>
-                <td id="midtop2" name="midtop2"><img id="imgMidTop2" name="imgMidTop2" src="img/playerFoot.png"></td>
+                <td id="midtop2" name="midtop2" onClick="openDialogPlayer()"><img id="imgMidTop2" name="imgMidTop2" src="img/playerFoot.png"></td>
                 <td id="midtop3" name="midtop3"><img id="imgMidTop3" name="imgMidTop3" src="img/playerFoot.png"></td>
                 <td id="midtop4" name="midtop4"><img id="imgMidTop4" name="imgMidTop4" src="img/playerFoot.png"></td>
                 <td id="midtop5" name="midtop5"><img id="imgMidTop5" name="imgMidTop5" src="img/playerFoot.png"></td>
@@ -93,18 +94,18 @@
                 <td id="midbot10" name="midbot10"><img id="imgMidBot10" name="imgMidBot10" src="img/playerFoot.png"></td>
             </tr>
             <tr>
-                <td id="def1" name="def1"><img src="img/playerFoot.png"></td>
-                <td id="def2" name="def2"><img src="img/playerFoot.png"></td>
-                <td id="def3" name="def3"><img src="img/playerFoot.png"></td>
-                <td id="def4" name="def4"><img src="img/playerFoot.png"></td>
-                <td id="def5" name="def5"><img src="img/playerFoot.png"></td>
+                <td id="def1" name="def1"><img id="imgDef1" name="imgDef1" src="img/playerFoot.png"></td>
+                <td id="def2" name="def2"><img id="imgDef2" name="imgDef2" src="img/playerFoot.png"></td>
+                <td id="def3" name="def3"><img id="imgDef3" name="imgDef3" src="img/playerFoot.png"></td>
+                <td id="def4" name="def4"><img id="imgDef4" name="imgDef4" src="img/playerFoot.png"></td>
+                <td id="def5" name="def5"><img id="imgDef5" name="imgDef5" src="img/playerFoot.png"></td>
             </tr>
             <tr>
-                <td id="def6" name="def6"><img src="img/playerFoot.png"></td>
-                <td id="def7" name="def7"><img src="img/playerFoot.png"></td>
-                <td id="def8" name="def8"><img src="img/playerFoot.png"></td>
-                <td id="def9" name="def9"><img src="img/playerFoot.png" ></td>
-                <td id="def10" name="def10"><img src="img/playerFoot.png"></td>
+                <td id="def6" name="def6"><img id="imgDef6" name="imgDef6" src="img/playerFoot.png"></td>
+                <td id="def7" name="def7"><img id="imgDef7" name="imgDef7" src="img/playerFoot.png"></td>
+                <td id="def8" name="def8"><img id="imgDef8" name="imgDef8" src="img/playerFoot.png"></td>
+                <td id="def9" name="def9"><img id="imgDef9" name="imgDef9" src="img/playerFoot.png" ></td>
+                <td id="def10" name="def10"><img id="imgDef10" name="imgDef10" src="img/playerFoot.png"></td>
             </tr>
         </table>
         <div class="changeFormation">
@@ -123,5 +124,26 @@
            	</table>
        	</div>
     </div>
+    
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span onclick="closeDialogPlayer()" class="close">&times;</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+    
+    
 </body>
 <footer id="footer" style="border:1px solid blue;position:relative;bottom:0"></footer>
