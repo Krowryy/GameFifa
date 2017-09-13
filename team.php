@@ -1,10 +1,30 @@
 <?php 
 
+$dsn = 'mysql:dbname=gamefifa;host=127.0.0.1';
+$user = 'root';
+$password = '';
+
+try {
+    $dbh = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    echo 'Connexion échouée : ' . $e->getMessage();
+}
+
+function addLogEvent($event)
+{
+    $time = date("D, d M Y H:i:s");
+    $time = "[".$time."] ";
+    
+    $event = $time.$event."\n";
+    
+    file_put_contents("fichier.log", $event, FILE_APPEND);
+}
 ?>
 
 <link rel="stylesheet" href="css/game.css" type="text/css" />
 <script type="text/javascript" src="js/formation.js" ></script>
- <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src="//ajax.googleapis.com/ajax/libs/dojo/1.12.1/dojo/dojo.js"></script>
 <header id="header" class="header" style="border:1px solid red">
     <div class="container">
       <a href="index.php">Home</a>
@@ -147,3 +167,5 @@
     
 </body>
 <footer id="footer" style="border:1px solid blue;position:relative;bottom:0"></footer>
+
+<?php $event = "22";addLogEvent($event);?>

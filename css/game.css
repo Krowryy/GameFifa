@@ -1,3 +1,7 @@
+@import "../../external/dojo/resources/dojo.css";
+@import "../../external/dijit/themes/dijit.css";
+@import "../../external/dijit/icons/commonIcons.css";
+
 .container {
     overflow: hidden;
     font-family: Arial;
